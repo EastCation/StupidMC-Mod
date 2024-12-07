@@ -1,0 +1,52 @@
+{
+	"schemaVersion": 1,
+	"id": "stupidmc-mod",
+	"version": "${version}",
+	"name": "StupidMC Mod",
+	"description": "沙雕翻译包，但是是模组版本，我也不知道我为什么要这么做，可能是资源包下载的人太少了？",
+	"authors": [
+		"Starmoe"
+	],
+	"contributors": [
+		"NuanR_Mxi",
+		"SkyDynamic"
+	],
+	"contact": {
+		"homepage": "https://main.moerain.cn/",
+		"sources": "https://github.com/EastCation/StupidMC-Mod",
+		"issues": "https://github.com/EastCation/StupidMC-Mod/issues"
+	},
+	"license": "GPLv3",
+	"icon": "assets/stupidmc-mod/pack-mod.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"moe.stupidmc.StupidMCMod"
+		],
+		"client": [
+			"moe.stupidmc.StupidMCModClient"
+		],
+		"fabric-datagen": [
+			"moe.stupidmc.StupidMCModDataGenerator"
+		]
+	},
+	"mixins": [
+		"stupidmc-mod.mixins.json",
+		{
+			"config": "stupidmc-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*",
+		"modmenu": "*",
+		"iris": "*",
+		"sodium": "*"
+	}
+}
